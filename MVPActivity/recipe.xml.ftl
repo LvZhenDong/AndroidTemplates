@@ -10,7 +10,19 @@
 </#if>
 
 <instantiate from="root/src/app_package/SimpleActivity.java.ftl"
-			   to="${escapeXmlAttribute(srcOut)}/${activityClass}.java" />
-<open file="${escapeXmlAttribute(srcOut)}/${activityClass}.java" />
+			   to="${escapeXmlAttribute(srcOut)}/ui/activity/${activityClass}.java" />
+<open file="${escapeXmlAttribute(srcOut)}/ui/activity/${activityClass}.java" />
+
+<instantiate from="root/src/app_package/SimpleContract.java.ftl"
+			   to="${escapeXmlAttribute(srcOut)}/contract/${mvpName}Contract.java" />
+<open file="${escapeXmlAttribute(srcOut)}/contract/${mvpName}Contract.java" />
+
+<instantiate from="root/src/app_package/SimplePresenterImpl.java.ftl"
+			   to="${escapeXmlAttribute(srcOut)}/presenter/${mvpName}PresenterImpl.java" />
+<open file="${escapeXmlAttribute(srcOut)}/presenter/${mvpName}PresenterImpl.java" />
+
+<instantiate from="root/src/app_package/SimpleModelImpl.java.ftl"
+			   to="${escapeXmlAttribute(srcOut)}/model/${mvpName}ModelImpl.java" />
+<open file="${escapeXmlAttribute(srcOut)}/model/${mvpName}ModelImpl.java" />
 
 </recipe>
