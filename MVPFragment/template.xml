@@ -7,18 +7,19 @@
 
     <category value="Fragment" />
 
-    <parameter
-        id="fragmentClass"
-        name="Fragment Name"
-        type="string"
-        constraints="class|unique|nonempty"
-        default="MainFragment"
-        help="The name of the fragment class to create" />
-		
 	<parameter
 		id="mvpName"
 		name="mvpName"
 		type="string"/>
+		
+	<parameter
+        id="fragmentClass"
+        name="Fragment Name"
+        type="string"
+        constraints="class|unique|nonempty"
+		suggest="${mvpName}Fragment"
+        default="MainFragment"
+        help="The name of the fragment class to create" />
 
     <parameter
         id="generateLayout"
@@ -32,6 +33,7 @@
         name="Layout Name"
         type="string"
         constraints="layout|unique|nonempty"
+		suggest="fragment_${classToResource(mvpName)}"
         default="fragment_main"
         visibility="generateLayout"
         help="The name of the layout to create for the fragment" />
