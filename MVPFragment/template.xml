@@ -43,6 +43,7 @@
         name="Package name"
         type="string"
         constraints="package"
+		suggest="com.mycompany.myapp"
         default="com.mycompany.myapp" />
 
     <globals file="globals.xml.ftl" />
